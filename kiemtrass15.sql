@@ -61,7 +61,7 @@ before insert on grades
 for each row
 begin 
 	if NEW.score < 0 then set NEW.score = 0;
-	else if NEW.score > 10 then set NEW.score = 10;
+	elseif NEW.score > 10 then set NEW.score = 10;
 	end if;
 end $$
 DELIMITER ;
@@ -75,4 +75,3 @@ set total_debt = 5000000
 where student_id =  'SV02';
 commit
 
---
